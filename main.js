@@ -1,13 +1,11 @@
 let media = window.matchMedia("(max-width: 700px)");
 
 // window onload function  
-
 window.addEventListener('load', ()=>{
     
 });
 
 // header section & phone's header section 
-
 let body = document.getElementsByTagName('body')[0].style;
 let bar = document.getElementById('bar');
 let nav = document.getElementById('navbar');
@@ -18,19 +16,16 @@ on click function for bar/nav/cover
 ->to show/hide the nav bar
 ->to toggle body for scrolling
 */
-
 bar.addEventListener('click', ()=>{
     nav.style.bottom = '0%';
     cover.style.bottom = '0%';
     body.overflow = 'hidden';
 });
-
 nav.addEventListener('click', ()=>{
     cover.style.bottom = '-140%';
     nav.style.bottom = '-140%';
     body.overflow = 'auto';      
 });
-
 cover.addEventListener('click', ()=>{
     cover.style.bottom = '-140%';
     nav.style.bottom = '-140%';
@@ -40,7 +35,6 @@ cover.addEventListener('click', ()=>{
 /*
 window scroll function to change the header color according to the scroll
  */
-
 window.addEventListener('scroll', ()=>{
     let header = document.getElementById('header');
     let phHeader = document.getElementById('ph-header');
