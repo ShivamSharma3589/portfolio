@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -9,23 +11,16 @@
     outline: none;
 }
 
-body{
-    overflow-x: hidden;
-}
-
 /* utility classes  */
-
 .red{
     color: rgb(204, 0, 0);
     font-weight: 600;
 }
-
 a{
     text-decoration: none;
 }
 
 /* background wallpaper  */
-
 #wallpaper{
     height: 100vh;
     position: fixed;
@@ -34,14 +29,12 @@ a{
     z-index: -1;
     filter: blur(1px);
 }
-
 #wallpaper img{
     height: 100vh;
     width: 100vw;
 }
 
 /* jump to top button  */
-
 #jump-to-top{
     position: fixed;
     bottom: 0;
@@ -101,13 +94,11 @@ header{
 }
 
 /* bars button  */
-
 #bar,#cross{
     display: none;
 }
 
 /* navigation bar  */
-
 nav a{
     color: white;
     font-weight: 900;
@@ -117,61 +108,50 @@ nav a{
     transition: .15s linear;
     height: 100%;
 }
-
 nav a:hover{
     background-color: rgb(255, 255, 255);
     color: black;
 }
 
 /* universal section layout  */
-
 section{
     padding-top: 3.5rem !important;
     padding-bottom: 2.5rem !important;
 }
-
 .heading{
     margin-bottom: 1rem;
     padding: .5rem 0 1rem;
 }
-
 .heading-1{
     font-weight: 600;
     font-size: 2rem;
     text-align: center;
 }
-
 .sub-heading-1{
     text-align: center;
     font-weight: 700;
 }
-
 .flex{
     display: flex;
 }
-
 .item{
     width: 50%;
     padding: 0 2.5rem;
 }
-
 .w-45{
     width: 45%;
 }
-
 .w-55{
     width: 55%;
 }
 
 /* home section  */
-
 #home{
     height: 100vh;
     color: white;
     display: flex;
     justify-content: center;
 }
-
 #home > div{
     width: 50%;
     padding: 2.5rem;
@@ -179,71 +159,57 @@ section{
     flex-direction: column;
     justify-content: center;
 }
-
 .font-1{
     font-size: 2rem;
 }
-
 .font-2{
     font-size: 3rem;
     font-weight: 900;
     margin: .51rem 0;
 }
-
 .myImage{
-    width: 50%;
+    width: 20vw;
     height: auto;
     display: block;
     margin: auto;
     border-radius: 10px;
 }
-
 #home .myImage{
     position: absolute;
     bottom: 0;
-    right: -14%;
+    right: 0;
 }
 
 /* about section */
-
 #about{
     background-color: white;
 }
-
 #about .item:first-child{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-#about .myImage{
-    width: 80%;
-}
-
 .title{
     font-size: 1.6rem;
     font-weight: 900;
     padding: 1rem 0;
 }
-
 .para{
     line-height: 1.7rem;
     text-align: justify;
+    font-weight: 500;
 }
 
 /* skills section  */
-
 #skills{
     background-color: black;
     color: white;
 }
-
 .justify-center{
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-
 .skill-title{
     display: flex;
     justify-content: space-between;
@@ -251,53 +217,43 @@ section{
     font-size: 1.2rem;
     padding: .21rem ;
 }
-
 .bar{
     border: 1px solid rgba(255, 255, 255, 0.418);
     border-radius: 10px;
     margin: .2rem;
 }
-
 .fill{
     height: 8px;
     background-color: red;
     width: 60%;
     border-radius: 10px;
 }
-
 .w-80{
     width: 80%;
 }
-
 .w-60{
     width: 60%;
 }
-
 .w-50{
     width: 50%;
 }
-
 .w-30{
     width: 30%;
 }
 
 /* projects section  */
-
 #projects{
-    background: url('images/pbg.jpg') center center/cover;
+    background: url('images/project background.jpeg') center center/cover;
 }
-
 #projects .heading{
     color: white;
     text-shadow: 0px 0px 4px black, 0px 0px 4px black;
 }
-
 #project-container{
     position: relative;
     width: 100%;
     max-width: 100%;
 }
-
 #projects-slider{
     width: 90%;
     margin: .8rem auto;
@@ -309,7 +265,6 @@ section{
     overflow: hidden;
     border-radius: 10px; 
 }
-
 .project-item{
     background-color: black;
     color: white;
@@ -322,24 +277,20 @@ section{
     justify-content: space-between;
     flex-direction: column;
 }
-
 .project-images{
     width: 100%;
 }
-
 .project-info{
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     height: 60%;
 }
-
 .project-title{
     font-size: 1.3rem;
     font-weight: 900;
     margin: .4rem auto;
 }
-
 .project-detail{
     font-weight: 500;
     font-size: .9rem;
@@ -347,7 +298,6 @@ section{
     text-align: justify;
     overflow: auto;
 }
-
 .project-link{
     color: white;
     background-color: red;
@@ -359,7 +309,6 @@ section{
     font-size: 1rem;
     box-shadow: 0px 0px 3px white;
 }
-
 .ps-arrows{
     position: absolute;
     top: 50%;
@@ -370,20 +319,16 @@ section{
     cursor: pointer;
     z-index: 1;
 }
-
 .left{
     left: .35rem;
 }
-
 .left:active{
     left: 0;
     color: red;
 }
-
 .right{
     right: .35rem;
 }  
-
 .right:active{
     color: red;
     right: 0;
@@ -391,11 +336,9 @@ section{
 
 
 /* contact section  */
-
 #contact{
     background-color: white;
 }
-
 #below{
     text-decoration: none;
     background-color: red;
@@ -403,18 +346,15 @@ section{
     padding: 2px 5px;
     border-radius: 3px;
 }
-
 .tags{
     display: flex;
     flex-wrap: wrap;
     margin: 1.3rem 0;
     font-weight: 600;
 }
-
 .tags > div{
     font-size: 1rem;
 }
-
 .icon{
     width: 10%;
     display: flex;
@@ -425,16 +365,13 @@ section{
     border-right: 2px solid red;
     margin-right: 5px;
 }
-
 .cn-value{
     font-weight: 500;
     padding: .3rem 0;
 }
-
 form{
     padding: 0 1rem 1rem;
 }
-
 input, textarea{
     width: 100%;
     padding: .7rem;
@@ -443,17 +380,14 @@ input, textarea{
     border: 1px solid rgba(0, 0, 0, 0.589);
     font-size: 1rem;
 }
-
 input:focus,textarea:focus{
     background-color: rgba(255, 247, 211, 0.753);
     border: 2px solid black;
 }
-
 textarea{
     resize: none;
     height: 6rem;
 }
-
 .btn{
     background-color: red;
     color: white;
@@ -464,28 +398,31 @@ textarea{
     font-size: 1rem;
     font-weight: 500;
 }
+.btn:hover{
+    border: none;
+}
+.btn:active{
+    transform: scale(0.9);
+}
 
 /* footer section  */
-
 footer{
     background-color: black;
     color: white;
     padding: 1rem;
     text-align: center;
 }
-
 #social-links{
     margin: 2rem 0;
 }
-
 #social-links a{
     color: white;
     font-size: 2rem;
     margin: 1rem;
 }
-
 #social-links a:hover{
     color: red;
+    transform: scale(1.2);
 }
 
 
