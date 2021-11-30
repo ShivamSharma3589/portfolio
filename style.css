@@ -192,6 +192,7 @@ section{
     line-height: 1.7rem;
     text-align: justify;
     font-weight: 600;
+    color: rgb(46, 46, 46);
 }
 #about .w-55{
     padding: 0 4rem;
@@ -575,4 +576,3 @@ footer{
         padding-bottom: 5rem;
     };
 }
-
