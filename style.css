@@ -168,18 +168,12 @@ section{
     margin: .51rem 0;
 }
 .myImage{
-    width: 20vw;
+    width: 60%;
     height: auto;
     display: block;
     margin: auto;
     border-radius: 10px;
 }
-#home .myImage{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-}
-
 /* about section */
 #about{
     background-color: white;
@@ -197,7 +191,7 @@ section{
 .para{
     line-height: 1.7rem;
     text-align: justify;
-    font-weight: 500;
+    font-weight: 600;
 }
 #about .w-55{
     padding: 0 4rem;
@@ -449,9 +443,8 @@ footer{
         font-size: 1.65rem;
     }
     #bar{
-        float: right;
         color: white;
-        height: 2.5rem;
+        height: 2.8rem;
         width: 3rem;
         display: flex;
         justify-content: center;
@@ -548,6 +541,9 @@ footer{
     #about .w-55{
         padding: 0 2rem;
     }
+    #about .para{
+        font-size: 1.1rem;
+    }
     #projects .heading{
         color: white;
         text-shadow: 0px 0px 4px black, 0px 0px 7px black, 0px 0px 10px rgb(255, 255, 255);
@@ -579,3 +575,4 @@ footer{
         padding-bottom: 5rem;
     };
 }
+
