@@ -199,6 +199,9 @@ section{
     text-align: justify;
     font-weight: 500;
 }
+#about .w-55{
+    padding: 0 4rem;
+}
 
 /* skills section  */
 #skills{
@@ -427,9 +430,6 @@ footer{
 
 
 @media (max-width: 700px){
-    html{
-        font-size: 14px;
-    }
     #jump-to-top{
         bottom: 7vh;
     }
@@ -437,7 +437,8 @@ footer{
         display: none;
     }
     #ph-header{
-        display: block;
+        display: flex;
+        justify-content: space-between;
         position: fixed;
         bottom: 0;
         z-index: 1;
@@ -525,7 +526,6 @@ footer{
     .font-1{
         font-size: 1.7rem;
     }
-    
     .font-2{
         font-size: 2.4rem;
     }
@@ -544,6 +544,9 @@ footer{
     }
     .heading-1{
         padding: 0 0 .3rem;
+    }
+    #about .w-55{
+        padding: 0 2rem;
     }
     #projects .heading{
         color: white;
