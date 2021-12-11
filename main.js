@@ -81,7 +81,6 @@ let projectSliderInterval = setInterval(() => {
         projectSlider.scrollBy(size / 3, 0);
         scrollEndManager += (size / 3);
     }
-    console.log(scrollEndManager);
 }, 3000);
 
 pRight.addEventListener('click', () => {
