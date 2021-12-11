@@ -1,8 +1,8 @@
 let media = window.matchMedia("(max-width: 700px)");
 
 // window onload function  
-window.addEventListener('load', ()=>{
-    
+window.addEventListener('load', () => {
+
 });
 
 // header section & phone's header section 
@@ -16,26 +16,26 @@ on click function for bar/nav/cover
 ->to show/hide the nav bar
 ->to toggle body for scrolling
 */
-bar.addEventListener('click', ()=>{
+bar.addEventListener('click', () => {
     nav.style.bottom = '0%';
     cover.style.bottom = '0%';
     body.overflow = 'hidden';
 });
-nav.addEventListener('click', ()=>{
+nav.addEventListener('click', () => {
     cover.style.bottom = '-140%';
     nav.style.bottom = '-140%';
-    body.overflow = 'auto';      
+    body.overflow = 'auto';
 });
-cover.addEventListener('click', ()=>{
+cover.addEventListener('click', () => {
     cover.style.bottom = '-140%';
     nav.style.bottom = '-140%';
-    body.overflow = 'auto';      
+    body.overflow = 'auto';
 });
 
 /*
 window scroll function to change the header color according to the scroll
  */
-window.addEventListener('scroll', ()=>{
+window.addEventListener('scroll', () => {
     let header = document.getElementById('header');
     let phHeader = document.getElementById('ph-header');
     let upArrow = document.getElementById('jump-to-top');
@@ -63,21 +63,43 @@ let pRight = document.getElementById('p-right');
 let projectSlider = document.getElementById('projects-slider');
 let item = 0;
 let size = projectSlider.offsetWidth;
+let scrollEndManager = 0;
 
-pRight.addEventListener('click', ()=>{
+let projectSliderInterval = setInterval(() => {
     if (media.matches) {
-        projectSlider.scrollBy(size , 0);
+        if (scrollEndManager >= projectSlider.scrollWidth) {
+            projectSlider.scrollTo(0, 0);
+            scrollEndManager = 0;
+        }
+        projectSlider.scrollBy(size, 0);
+        scrollEndManager += size;
+    } else {
+        if (scrollEndManager >= projectSlider.scrollWidth) {
+            projectSlider.scrollTo(0, 0);
+            scrollEndManager = 0;
+        }
+        projectSlider.scrollBy(size / 3, 0);
+        scrollEndManager += (size / 3);
+    }
+    console.log(scrollEndManager);
+}, 3000);
+
+pRight.addEventListener('click', () => {
+    if (media.matches) {
+        projectSlider.scrollBy(size, 0);
     } else {
         projectSlider.scrollBy(size / 3, 0);
     }
+    clearInterval(projectSliderInterval);
 });
 
-pLeft.addEventListener('click', ()=>{
+pLeft.addEventListener('click', () => {
     if (media.matches) {
         projectSlider.scrollBy(size * (-1), 0);
     } else {
-        projectSlider.scrollBy((-1) * size / 3 , 0);
+        projectSlider.scrollBy((-1) * size / 3, 0);
     }
+    clearInterval(projectSliderInterval);
 });
 
 // contact me section 
